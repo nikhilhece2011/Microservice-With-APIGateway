@@ -1,0 +1,14 @@
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\bin\Debug\netcoreapp2.2\ApiGateway.Ocelot.deps.json
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\bin\Debug\netcoreapp2.2\ApiGateway.Ocelot.runtimeconfig.json
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\bin\Debug\netcoreapp2.2\ApiGateway.Ocelot.runtimeconfig.dev.json
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\bin\Debug\netcoreapp2.2\ApiGateway.Ocelot.dll
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\bin\Debug\netcoreapp2.2\ApiGateway.Ocelot.pdb
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\obj\Debug\netcoreapp2.2\ApiGateway.Ocelot.csprojAssemblyReference.cache
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\obj\Debug\netcoreapp2.2\ApiGateway.Ocelot.csproj.CoreCompileInputs.cache
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\obj\Debug\netcoreapp2.2\ApiGateway.Ocelot.RazorAssemblyInfo.cache
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\obj\Debug\netcoreapp2.2\ApiGateway.Ocelot.RazorAssemblyInfo.cs
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\obj\Debug\netcoreapp2.2\ApiGateway.Ocelot.AssemblyInfoInputs.cache
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\obj\Debug\netcoreapp2.2\ApiGateway.Ocelot.AssemblyInfo.cs
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\obj\Debug\netcoreapp2.2\ApiGateway.Ocelot.RazorTargetAssemblyInfo.cache
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\obj\Debug\netcoreapp2.2\ApiGateway.Ocelot.dll
+C:\Users\nsharm54\Desktop\Shopping_Cart_App\src\ApiGateways\with-ocelot\ApiGateway.Ocelot\obj\Debug\netcoreapp2.2\ApiGateway.Ocelot.pdb
