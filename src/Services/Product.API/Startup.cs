@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Product.API.Configurations;
+using Product.API.Infrastructure;
 using Product.API.Models;
 
 namespace Product.API
@@ -28,17 +30,17 @@ namespace Product.API
             services.AddOptions();
             services.Configure<GlobalIdentitySettings>(Configuration.GetSection("GLOBALIDENTITYSETTINGS"));
             services.ConfigureJWTToken(Configuration);
+            services.AddDbContext<ProductContext>(options => options.UseSqlServer(Configuration["ConnectionString"]));
+            services.AddTransient<ProductDBSeeder>();
             return AutoFacProviderConfigurations.ConfigureAutoFacDependencies(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ProductDBSeeder dbSeeder)
         {
-            //app.UseCors(x => x.AllowAnyHeader()
-            //.AllowAnyMethod()
-            //.AllowAnyOrigin());
             app.UseAuthentication();
             app.UseMvc();
+            dbSeeder.SeedAsync(app.ApplicationServices).Wait();
         }
     }
 }

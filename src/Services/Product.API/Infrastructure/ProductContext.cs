@@ -19,11 +19,6 @@ namespace Product.API.Infrastructure
         {
 
         }
-        public ProductContext(IOptions<GlobalIdentitySettings> settings)
-        {
-            _settings = settings;
-        }
-
         public DbSet<Products> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -31,12 +26,5 @@ namespace Product.API.Infrastructure
             builder.ApplyConfiguration(new ProductsEntityConfiguration());
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(_settings.Value.PRODUCTDBCONN);
-            }
-        }
     }
 }

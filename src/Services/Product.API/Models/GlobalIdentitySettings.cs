@@ -9,8 +9,7 @@ namespace Product.API.Models
     {
         public string SIGNING_KEY { get; set; }
         public string ISSUER { get; set; }
-        public string AUDIENCE { get; set; }
-        public string PRODUCTDBCONN { get; set; }
+        public string AUDIENCE { get; set; }       
         public string IDENTITYURL { get; set; }
     }
 }

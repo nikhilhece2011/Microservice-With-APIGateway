@@ -13,16 +13,12 @@ namespace Identity.API.Infrastructure
 {
     public class IdentityDbContext : DbContext
     {
-        private readonly IOptions<GlobalIdentitySettings> _settings;
+
+
         public IdentityDbContext(DbContextOptions<IdentityDbContext> options)
             : base(options)
         {
 
-        }
-
-        public IdentityDbContext(IOptions<GlobalIdentitySettings> settings)
-        {
-            _settings = settings;
         }
 
         public DbSet<Users> Users { get; set; }
@@ -32,12 +28,5 @@ namespace Identity.API.Infrastructure
             builder.ApplyConfiguration(new UsersEntityConfiguration());
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(_settings.Value.IDENTITYDBCONN);
-            }
-        }
     }
 }

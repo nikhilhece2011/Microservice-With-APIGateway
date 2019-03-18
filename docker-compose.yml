@@ -1,0 +1,43 @@
+version: '3.4'
+
+services:
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+    environment:
+            SA_PASSWORD: "Test@123"
+            ACCEPT_EULA: "Y"
+    ports:
+      - "5433:1433"    
+    networks:
+      - aspnetcoreapp-network
+
+
+  identity.api:
+    build:
+      context: src/Services/Identity.API/
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionString=Server=sql.data;Database=IdentityDB;User Id=SA;Password=Test@123;MultipleActiveResultSets=True
+    ports:
+      - "8000:80"
+    depends_on: 
+      - sql.data
+    networks:
+      - aspnetcoreapp-network
+
+  product.api:
+    build:
+      context: src/Services/Product.API/
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionString=Server=sql.data;Database=ProductDB;User Id=SA;Password=Test@123;MultipleActiveResultSets=True
+    ports:
+      - "8001:80"
+    depends_on: 
+      - sql.data
+    networks:
+      - aspnetcoreapp-network
+
+networks:
+    aspnetcoreapp-network:
+        driver: bridge
